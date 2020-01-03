@@ -2,7 +2,15 @@
 import "source-map-support/register";
 import cdk = require("@aws-cdk/core");
 import { DemoS3Stack } from "../lib/demo-s3-stack";
+import { DemoEc2Stack } from "../lib/demo-ec2-stack";
 
+if (!process.env.AWS_ACCOUNT_ID) {
+  throw new Error("AWS_ACCCOUNT_ID not set");
+}
+
+const env: cdk.StackProps = {
+  env: { region: "eu-west-1", account: process.env.AWS_ACCOUNT_ID }
+};
 const app = new cdk.App();
-new DemoS3Stack(app, "DemoS3Stack");
-new DemoS3Stack(app, "DemoS3Stack2");
+new DemoS3Stack(app, "DemoS3Stack", env);
+new DemoEc2Stack(app, "DemoEc2Stack", env);
