@@ -8,8 +8,10 @@
     "build": "tsc",
     "watch": "tsc -w",
     "cdk": "cdk",
-    "deploy-ec2-part-1-demo": "cdk deploy DemoEc2Part1Stack --require-approval=never",
-    "destroy-ec2-part-1-demo": "cdk destroy DemoEc2Part1Stack --force",
+    "deploy-fargate-demo": "cdk deploy DemoFargateStack --require-approval=never",
+    "destroy-fargate-demo": "cdk destroy DemoFargateStack --force",
+    "deploy-ec2-demo": "cdk deploy DemoEc2Stack --require-approval=never",
+    "destroy-ec2-demo": "cdk destroy DemoEc2Stack --force",
     "deploy-s3-demo": "cdk deploy DemoS3Stack --require-approval=never",
     "destroy-s3-demo": "cdk destroy DemoS3Stack --force"
   },

@@ -10,8 +10,12 @@ deploy-s3:
 destroy-s3:
 	(npm run build && npm run destroy-s3-demo)
 
-deploy-ec2-part-1:
-	(npm run build && npm run deploy-ec2-part-1-demo)
+deploy-ec2:
+	(npm run build && npm run deploy-ec2-demo)
+destroy-ec2:
+	(npm run build && npm run destroy-ec2-demo)
 
-destroy-ec2-part-1:
-	(npm run build && npm run destroy-ec2-part-1-demo)
+deploy-fargate:
+	(npm run build && npm run deploy-fargate-demo)
+destroy-fargate:
+	(npm run build && npm run destroy-fargate-demo)
