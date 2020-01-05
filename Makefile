@@ -25,8 +25,12 @@ deploy-lambda:
 destroy-lambda:
 	(npm run build && npm run destroy-lambda-demo)
 
-
 deploy-apigateway:
 	(npm run build && npm run deploy-apigateway-demo)
 destroy-apigateway:
 	(npm run build && npm run destroy-apigateway-demo)
+
+deploy-sqs:
+	(npm run build && npm run deploy-sqs-demo)
+destroy-sqs:
+	(npm run build && npm run destroy-sqs-demo)
