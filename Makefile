@@ -19,3 +19,9 @@ deploy-fargate:
 	(npm run build && npm run deploy-fargate-demo)
 destroy-fargate:
 	(npm run build && npm run destroy-fargate-demo)
+
+
+deploy-lambda:
+	(npm run build && npm run deploy-lambda-demo)
+destroy-lambda:
+	(npm run build && npm run destroy-lambda-demo)
