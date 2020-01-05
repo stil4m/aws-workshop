@@ -8,6 +8,8 @@
     "build": "tsc",
     "watch": "tsc -w",
     "cdk": "cdk",
+    "deploy-apigateway-demo": "cdk deploy DemoApigatewayStack --require-approval=never",
+    "destroy-apigateway-demo": "cdk destroy DemoApigatewayStack --force",
     "deploy-lambda-demo": "cdk deploy DemoLambdaStack --require-approval=never",
     "destroy-lambda-demo": "cdk destroy DemoLambdaStack --force",
     "deploy-fargate-demo": "cdk deploy DemoFargateStack --require-approval=never",
@@ -18,6 +20,7 @@
     "destroy-s3-demo": "cdk destroy DemoS3Stack --force"
   },
   "devDependencies": {
+    "@aws-cdk/aws-apigateway": "^1.19.0",
     "@aws-cdk/aws-ec2": "^1.19.0",
     "@aws-cdk/aws-ecs": "^1.19.0",
     "@aws-cdk/aws-ecs-patterns": "^1.19.0",

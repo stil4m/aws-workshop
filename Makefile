@@ -20,8 +20,13 @@ deploy-fargate:
 destroy-fargate:
 	(npm run build && npm run destroy-fargate-demo)
 
-
 deploy-lambda:
 	(npm run build && npm run deploy-lambda-demo)
 destroy-lambda:
 	(npm run build && npm run destroy-lambda-demo)
+
+
+deploy-apigateway:
+	(npm run build && npm run deploy-apigateway-demo)
+destroy-apigateway:
+	(npm run build && npm run destroy-apigateway-demo)
