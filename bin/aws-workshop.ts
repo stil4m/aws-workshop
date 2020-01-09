@@ -7,6 +7,9 @@ import { DemoFargateStack } from "../lib/demo-fargate-stack";
 import { DemoLambdaStack } from "../lib/demo-lambda-stack";
 import { DemoApigatewayStack } from "../lib/demo-apigateway-stack";
 import { DemoSqsStack } from "../lib/demo-sqs-stack";
+import { UsersStack } from "../lib/users-stack";
+import * as fs from "fs";
+import * as path from "path";
 
 if (!process.env.AWS_ACCOUNT_ID) {
   throw new Error("AWS_ACCCOUNT_ID not set");
@@ -22,3 +25,13 @@ new DemoFargateStack(app, "DemoFargateStack", env);
 new DemoLambdaStack(app, "DemoLambdaStack", env);
 new DemoApigatewayStack(app, "DemoApigatewayStack", env);
 new DemoSqsStack(app, "DemoSqsStack", env);
+
+const userConfig = JSON.parse(
+  fs.readFileSync(path.resolve(__dirname, "../users-config.json"), "UTF-8")
+);
+
+new UsersStack(app, "UsersStack", {
+  usernames: userConfig.usernames,
+  initialPassword: userConfig.initialPassword,
+  ...env
+});

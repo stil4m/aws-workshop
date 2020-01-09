@@ -19,7 +19,8 @@
     "deploy-ec2-demo": "cdk deploy DemoEc2Stack --require-approval=never",
     "destroy-ec2-demo": "cdk destroy DemoEc2Stack --force",
     "deploy-s3-demo": "cdk deploy DemoS3Stack --require-approval=never",
-    "destroy-s3-demo": "cdk destroy DemoS3Stack --force"
+    "destroy-s3-demo": "cdk destroy DemoS3Stack --force",
+    "deploy-users-stack": "cdk deploy UsersStack"
   },
   "devDependencies": {
     "@aws-cdk/aws-apigateway": "^1.19.0",

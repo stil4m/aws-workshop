@@ -34,3 +34,6 @@ deploy-sqs:
 	(npm run build && npm run deploy-sqs-demo)
 destroy-sqs:
 	(npm run build && npm run destroy-sqs-demo)
+
+create-users:
+	(npm run build && npm run deploy-users-stack)
