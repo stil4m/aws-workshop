@@ -7,5 +7,11 @@
     "eu-west-1c"
   ],
   "ami:account=815855299194:filters.image-type.0=machine:filters.name.0=amzn-ami-vpc-nat-*:filters.state.0=available:owners.0=amazon:region=eu-west-1": "ami-0ab9a54c72bfd7a10",
-  "ami:account=815855299194:filters.image-type.0=machine:filters.name.0=amzn2-ami-hvm-2.0.20191116.0-x86_64-gp2:filters.state.0=available:owners.0=amazon:region=eu-west-1": "ami-01f14919ba412de34"
+  "ami:account=815855299194:filters.image-type.0=machine:filters.name.0=amzn2-ami-hvm-2.0.20191116.0-x86_64-gp2:filters.state.0=available:owners.0=amazon:region=eu-west-1": "ami-01f14919ba412de34",
+  "availability-zones:account=358033701822:region=eu-west-1": [
+    "eu-west-1a",
+    "eu-west-1b",
+    "eu-west-1c"
+  ],
+  "ami:account=358033701822:filters.image-type.0=machine:filters.name.0=amzn2-ami-hvm-2.0.20191116.0-x86_64-gp2:filters.state.0=available:owners.0=amazon:region=eu-west-1": "ami-01f14919ba412de34"
 }

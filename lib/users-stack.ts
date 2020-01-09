@@ -13,12 +13,14 @@ export class UsersStack extends cdk.Stack {
       groupName: "demo-developers"
     });
     group.addManagedPolicy(
-      iam.ManagedPolicy.fromAwsManagedPolicyName("policy/AdministratorAccess")
+      iam.ManagedPolicy.fromAwsManagedPolicyName("AdministratorAccess")
     );
 
     props.usernames.forEach(username => {
       const user = new iam.User(this, `MyUser_${username}`, {
-        password: cdk.SecretValue.plainText(props.initialPassword)
+        userName: username,
+        password: cdk.SecretValue.plainText(props.initialPassword),
+        passwordResetRequired: true
       });
       group.addUser(user);
     });
